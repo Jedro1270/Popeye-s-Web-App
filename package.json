@@ -1,0 +1,13 @@
+{
+  "name": "popeye-web-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jedro1270 <jedro1270@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
