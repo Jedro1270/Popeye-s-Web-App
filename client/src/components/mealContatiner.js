@@ -1,11 +1,10 @@
 import { styled, Paper, Box, Typography } from '@material-ui/core';
-import { Description } from '@material-ui/icons';
 
 export default function MealContainer({ imagePath, description, price }) {
   return (
     <MealContainerBody>
         <ImageContainer>
-            <img src={imagePath} alt={description} height='100%'/>
+            <img src={imagePath} alt={'Meal'} height='100%'/>
             <PriceText>
                 {`Php ${price}.00`}
             </PriceText>
