@@ -1,10 +1,10 @@
-import { styled, Paper, Box, Typography } from '@material-ui/core';
+import { styled, Box, Typography, Card, CardActions, Button } from '@material-ui/core';
 
-export default function MealContainer({ imagePath, description, price }) {
+export default function MealContainer({ imagePath, imageAlt, description, price }) {
   return (
     <MealContainerBody>
         <ImageContainer>
-            <img src={imagePath} alt={'Meal'} height='100%'/>
+            <img src={imagePath} alt={imageAlt} height='100%'/>
             <PriceText>
                 {`Php ${price}.00`}
             </PriceText>
@@ -13,11 +13,17 @@ export default function MealContainer({ imagePath, description, price }) {
         <DescriptionText>
             {description}
         </DescriptionText>
+
+        <CardActions>
+            <AddToOrders variant='contained'>
+                Order
+            </AddToOrders>
+        </CardActions>
     </MealContainerBody>
   );
 }
 
-const MealContainerBody = styled(Paper)({
+const MealContainerBody = styled(Card)({
     elevation: '3',
     width: '50%',
     margin: '10px auto',
@@ -49,4 +55,12 @@ const DescriptionText = styled(Typography)({
     '@media (max-width: 1024px)': {
         margin: '30px 0px 5px 0px'
     },
+});
+
+const AddToOrders = styled(Button)({
+    backgroundColor: 'rgb(255, 26, 26)',
+    color: 'white',
+    '&:hover': {
+        backgroundColor: 'rgb(255, 128, 128)'
+    }
 });
